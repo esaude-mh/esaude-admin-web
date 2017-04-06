@@ -1,0 +1,29 @@
+<div class="demo-container" mdl-shadow="2">
+   <mdl-layout mdl-layout-fixed-header mdl-layout-header-seamed #mdlLayout1="mdlLayout">
+      <mdl-layout-header>
+         <mdl-layout-header-row>
+            <mdl-layout-title>eSaude Admin</mdl-layout-title>
+            <mdl-layout-spacer></mdl-layout-spacer>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+               <a class="mdl-navigation__link" >Docs</a>
+               <a class="mdl-navigation__link" >Support</a>
+               <a class="mdl-navigation__link" >Contact</a>
+            </nav>
+         </mdl-layout-header-row>
+      </mdl-layout-header>
+      <mdl-layout-drawer>
+         <mdl-layout-title>eSaude Admin</mdl-layout-title>
+         <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" [routerLink]="['/apps']" (click)="mdlLayout1.closeDrawer()">Apps</a>
+            <a class="mdl-navigation__link"  (click)="mdlLayout1.closeDrawer()">Native Upgrade</a>
+            <a routerLink="/about" class="mdl-navigation__link"  (click)="mdlLayout1.closeDrawer()">System Info</a>
+         </nav>
+      </mdl-layout-drawer>
+      <mdl-layout-content>
+         <div class="esaude-container">
+            <router-outlet></router-outlet>
+         </div>
+      </mdl-layout-content>
+   </mdl-layout>
+</div>
