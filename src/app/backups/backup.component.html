@@ -1,0 +1,11 @@
+<md-card class="esaude-backup-card">
+  <md-card-title>{{backup.filename}}</md-card-title>
+  <md-card-subtitle>{{ backup.size | numeral: '0.00 b' }}</md-card-subtitle>
+  <md-card-content>
+    <p md-line>{{ backup.created | date: 'medium' }}</p>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button (click)="downloadBackup()">Download</button>
+  </md-card-actions>
+</md-card>
+<p></p>

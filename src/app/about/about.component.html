@@ -1,8 +1,35 @@
 <h1>{{title}}</h1>
 <div *ngIf="about">
-  <h3>{{about.version}}</h3>
-  <h3>{{about.homepage}}</h3>
-  <h3>{{about.license}}</h3>
+  <md-list>
+    <h2 md-header>API</h2>
+    <h3 md-subheader>{{ about.description }}</h3>
+
+    <md-list-item>
+      <md-icon md-list-icon>settings</md-icon>
+      <h4 md-line>v{{ about.version }}</h4>
+    </md-list-item>
+
+    <md-list-item>
+      <md-icon md-list-icon>desktop_mac</md-icon>
+      <h4 md-line><a href="{{ about.homepage }}" target="_blank">{{ about.homepage }}</a></h4>
+    </md-list-item>
+
+    <md-list-item>
+      <md-icon md-list-icon>account_balance</md-icon>
+      <h4 md-line>{{ about.license }}</h4>
+    </md-list-item>
+
+    <md-list-item>
+      <md-icon md-list-icon>bug_report</md-icon>
+      <h4 md-line><a href="{{ about.bugs.url }}" target="_blank">{{ about.bugs.url }}</a></h4>
+    </md-list-item>
+
+    <md-list-item>
+      <md-icon md-list-icon>mail_outline</md-icon>
+      <h4 md-line><a href="mailto:{{ about.bugs.email }}" target="_blank">{{ about.bugs.email }}</a></h4>
+    </md-list-item>
+
+  </md-list>
 </div>
 <div *ngIf="error">
   An error occurred:

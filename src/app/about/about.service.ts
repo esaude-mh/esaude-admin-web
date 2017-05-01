@@ -8,12 +8,12 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class AboutService {
-  private esaudeAdminAboutiUrl = 'http://esaude-admin-api:2580/about';
+  private esaudeAdminAboutUrl = 'http://localhost:2580/about';
 
   constructor(private http: Http) { }
 
   getAbout(): Promise<About> {
-    return this.http.get(this.esaudeAdminAboutiUrl)
+    return this.http.get(this.esaudeAdminAboutUrl)
       .toPromise()
       .then(response => response.json() as About)
       .catch(this.handleError);

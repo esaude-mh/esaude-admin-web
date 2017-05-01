@@ -1,3 +1,5 @@
+@import 'deeppurple-amber.css';
+
 /* roboto-300 - latin */
 @font-face {
   font-family: 'Roboto';
@@ -51,6 +53,38 @@
        url('../fonts/roboto-v15-latin-italic.svg#Roboto') format('svg'); /* Legacy iOS */
 }
 
+html, body {
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+
 .esaude-container {
   padding: 20px;
+
+}
+
+.esaude-backup-tab-container {
+  padding: 10px;
+}
+
+.esaude-button-spinner {
+  display: inline;
+  height: 10px;
+}
+
+.esaude-backup-card {
+  width: 800px;
+}
+
+.title-float-right {
+  flex: 1 1 auto;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  /*text-decoration: underline;*/
 }
