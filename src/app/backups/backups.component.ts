@@ -30,7 +30,7 @@ export class BackupsComponent implements OnInit {
   getBackups(): void {
     this.backupService.getBackups().then(backups => {
       this.backups = backups;
-    })
+    });
   }
 
   setCreateButtonLoading(): void {

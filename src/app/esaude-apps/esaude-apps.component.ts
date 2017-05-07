@@ -22,6 +22,6 @@ export class EsaudeAppComponent implements OnInit {
   getApps(): void {
     this.appService.getApps().then(apps => {
       this.apps = apps;
-    })
+    });
   }
 }

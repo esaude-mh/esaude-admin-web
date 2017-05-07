@@ -29,6 +29,6 @@ export class AboutComponent implements OnInit {
   getAbout(): void {
     this.aboutService.getAbout().then(about => {
       this.about = about;
-    })
+    });
   }
 }

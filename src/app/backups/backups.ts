@@ -6,7 +6,7 @@ export enum BackupType {
 }
 
 export class BackupResponse {
-  message: string
+  message: string;
 }
 
 export class Backup {

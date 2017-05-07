@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'eSaude Admin';
   pages = [
-      { title: "Apps", route: "/apps" },
-      { title: "Backups", route: "/backups" },
-      { title: "Native Upgrade", route: "#" },
-      { title: "About", route: "/about" },
+      { title: 'Apps', route: '/apps' },
+      { title: 'Backups', route: '/backups' },
+      { title: 'Native Upgrade', route: '#' },
+      { title: 'About', route: '/about' },
   ];
 }

@@ -46,18 +46,18 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const pages = [
-        { title: "Apps", route: "/apps" },
-        { title: "Backups", route: "/backups" },
-        { title: "Native Upgrade", route: "#" },
-        { title: "About", route: "/about" },
+      { title: 'Apps', route: '/apps' },
+      { title: 'Backups', route: '/backups' },
+      { title: 'Native Upgrade', route: '#' },
+      { title: 'About', route: '/about' },
     ];
     const links = fixture.debugElement.queryAll(By.css('md-toolbar > div > \
       md-toolbar-row > button'));
 
     // Make sure navigation links are exactly what we expect
     links.forEach((val, i) => {
-        expect(val.attributes["ng-reflect-router-link"]).toEqual(
-          pages[pages.findIndex((e) => { return e.title == val.nativeElement.innerText })].route);
+      expect(val.attributes['ng-reflect-router-link']).toEqual(
+        pages[pages.findIndex((e) => { return e.title === val.nativeElement.innerText; })].route);
     });
 
     console.log('ohai'); // asd
