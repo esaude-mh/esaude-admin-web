@@ -59,7 +59,5 @@ describe('AppComponent', () => {
       expect(val.attributes['ng-reflect-router-link']).toEqual(
         pages[pages.findIndex((e) => { return e.title === val.nativeElement.innerText; })].route);
     });
-
-    console.log('ohai'); // asd
   }));
 });

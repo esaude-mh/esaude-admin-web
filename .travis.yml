@@ -18,3 +18,4 @@ install:
 script:
   - ng lint
   - ng test --single-run --code-coverage
+  - codecov -f coverage/*.json
