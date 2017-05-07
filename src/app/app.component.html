@@ -1,44 +1,10 @@
-<!-- <div class="demo-container" mdl-shadow="2">
-   <mdl-layout mdl-layout-fixed-header mdl-layout-header-seamed #mdlLayout1="mdlLayout">
-      <mdl-layout-header>
-         <mdl-layout-header-row>
-            <mdl-layout-title>eSaude Admin</mdl-layout-title>
-            <mdl-layout-spacer></mdl-layout-spacer>
-
-            <nav class="mdl-navigation mdl-layout--large-screen-only">
-               <a class="mdl-navigation__link" >Docs</a>
-               <a class="mdl-navigation__link" >Support</a>
-               <a class="mdl-navigation__link" >Contact</a>
-            </nav>
-         </mdl-layout-header-row>
-      </mdl-layout-header>
-      <mdl-layout-drawer>
-         <mdl-layout-title>eSaude Admin</mdl-layout-title>
-         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" [routerLink]="['/apps']" (click)="mdlLayout1.closeDrawer()">Apps</a>
-            <a class="mdl-navigation__link" [routerLink]="['/backups']" (click)="mdlLayout1.closeDrawer()">Backups</a>
-            <a class="mdl-navigation__link"  (click)="mdlLayout1.closeDrawer()">Native Upgrade</a>
-            <a routerLink="/about" class="mdl-navigation__link"  (click)="mdlLayout1.closeDrawer()">About</a>
-         </nav>
-      </mdl-layout-drawer>
-      <mdl-layout-content>
-         <div class="esaude-container">
-            <router-outlet></router-outlet>
-         </div>
-      </mdl-layout-content>
-   </mdl-layout>
-</div> -->
-
 <md-toolbar color="primary">
   <span>{{ title }}</span>
 
   <!-- This fills the remaining space of the current row -->
   <span class="title-float-right"></span>
 
-  <button md-button [routerLink]="['/apps']">Apps</button>
-  <button md-button [routerLink]="['/backups']" >Backups</button>
-  <button md-button disabled href="#">Native Upgrade</button>
-  <button md-button [routerLink]="['/about']">About</button>
+  <button *ngFor="let page of pages" md-button routerLink="{{ page.route }}">{{ page.title }}</button>
 </md-toolbar>
 <div class="esaude-container">
    <router-outlet></router-outlet>
