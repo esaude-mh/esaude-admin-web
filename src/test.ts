@@ -1,5 +1,9 @@
 // This file is required by karma.conf.js and loads recursively all the .spec and framework files
 
+// Hacky workaround for coverage issue
+// see https://github.com/angular/angular-cli/issues/1735
+import './app/app.module';
+
 import 'zone.js/dist/long-stack-trace-zone';
 import 'zone.js/dist/proxy.js';
 import 'zone.js/dist/sync-test';

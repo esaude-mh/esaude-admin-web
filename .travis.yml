@@ -12,7 +12,7 @@ env:
     - CHROME_BIN=chromium-browser
 before_script:
   - sh -e /etc/init.d/xvfb start
-  - npm install -g @angular/cli
+  - npm install -g @angular/cli codecov
 install:
   - npm install
 script:

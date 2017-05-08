@@ -24,9 +24,12 @@ module.exports = function (config) {
     mime: {
       'text/x-typescript': ['ts','tsx']
     },
+    coverageReporter: {
+      includeAllSources: true,      
+    },
     coverageIstanbulReporter: {
       reports: [ 'html', 'lcovonly', 'json' ],
-      fixWebpackSourcePaths: true
+      fixWebpackSourcePaths: true,
     },
     angularCli: {
       environment: 'dev'
