@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-import numeral from 'numeral';
+import * as numeral from 'numeral';
 
 @Pipe({name: 'numeral'})
 export class NumeralPipe implements PipeTransform {
