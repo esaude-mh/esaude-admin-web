@@ -9,7 +9,7 @@ export class AppComponent {
   pages = [
       { title: 'Apps', route: '/apps' },
       { title: 'Backups', route: '/backups' },
-      { title: 'Native Upgrade', route: '#' },
+      { title: 'Native Upgrade', route: '/native-upgrade' },
       { title: 'About', route: '/about' },
   ];
 }

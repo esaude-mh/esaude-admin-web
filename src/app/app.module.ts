@@ -15,7 +15,10 @@ import {
   MdIconModule,
   MdTabsModule,
   MdCardModule,
-  MdProgressSpinnerModule
+  MdProgressSpinnerModule,
+  MdChipsModule,
+  MdGridListModule,
+  MdTooltipModule
 } from '@angular/material';
 
 // esaude admin components
@@ -23,9 +26,12 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { BackupsComponent } from './backups/backups.component';
 import { BackupComponent } from './backups/backup.component';
-import { EsaudeAppComponent } from './esaude-apps/esaude-apps.component';
-import { EsaudeAppDetailComponent } from './esaude-apps/esaude-app-detail.component';
+
+import { EsaudeAppsComponent } from './esaude-apps/esaude-apps.component';
+import { EsaudeAppComponent } from './esaude-apps/esaude-app.component';
+
 import { NativeUpgradeComponent } from './native-upgrade/native-upgrade.component';
+import { TestRunningComponent } from './native-upgrade/test-running/test-running.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -35,9 +41,13 @@ import { AppRoutingModule } from './app-routing.module';
     AboutComponent,
     BackupsComponent,
     BackupComponent,
+
+    EsaudeAppsComponent,
     EsaudeAppComponent,
-    EsaudeAppDetailComponent,
+
     NativeUpgradeComponent,
+    TestRunningComponent,
+
     NumeralPipe
   ],
   imports: [
@@ -54,7 +64,10 @@ import { AppRoutingModule } from './app-routing.module';
     MdIconModule,
     MdTabsModule,
     MdCardModule,
-    MdProgressSpinnerModule
+    MdProgressSpinnerModule,
+    MdChipsModule,
+    MdGridListModule,
+    MdTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

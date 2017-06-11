@@ -1,0 +1,41 @@
+<md-card class="esaude-app-card">
+  <md-card-title>{{ app.name }}</md-card-title>
+  <md-card-subtitle>
+    <span *ngIf="app.version; else elseBlock">v{{ app.version }}</span>
+    <ng-template #elseBlock>Unknown Version</ng-template>
+  </md-card-subtitle>
+  <md-card-content>
+
+    <md-grid-list cols="2">
+      <md-grid-tile *ngFor="let container of app.containers">
+        <!-- this should be it's own component -->
+        <md-card class="esaude-container-card">
+          <md-card-header>
+            <div class="esaude-container-status-icon" mdTooltip="{{ container.status }}" [mdTooltipPosition]="'above'">
+              <div *ngIf="container.state === 'running'; else elseBlock">
+                <md-icon>check_circle</md-icon>
+              </div>
+              <ng-template #elseBlock>
+                <md-icon>error</md-icon>
+              </ng-template>
+            </div>
+            <md-card-title>{{container.image.name}}</md-card-title>
+            <md-card-subtitle>
+              <span *ngIf="app.version; else elseBlock1">v{{ container.image.version }}</span>
+              <ng-template #elseBlock1>Unknown Version</ng-template>
+            </md-card-subtitle>
+          </md-card-header>
+          <md-card-content>
+            Created {{ container.created.display }}
+          </md-card-content>
+        </md-card>
+      </md-grid-tile>
+    </md-grid-list>
+
+  </md-card-content>
+  <md-card-actions>
+    <button md-button>Restart</button>
+    <button md-button>Stop</button>
+  </md-card-actions>
+</md-card>
+<p></p>

@@ -1,11 +1,8 @@
+import { Container } from '../models/Container';
+
 export class EsaudeApp {
-  id: number;
+  id: string;
   name: string;
-  description: string;
   version: string;
-  installed: boolean;
-  running: boolean;
-  homepage: string;
-  config: string;
-  docs: string;
+  containers: Container[];
 }

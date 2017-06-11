@@ -48,7 +48,7 @@ describe('AppComponent', () => {
     const pages = [
       { title: 'Apps', route: '/apps' },
       { title: 'Backups', route: '/backups' },
-      { title: 'Native Upgrade', route: '#' },
+      { title: 'Native Upgrade', route: '/native-upgrade' },
       { title: 'About', route: '/about' },
     ];
     const links = fixture.debugElement.queryAll(By.css('md-toolbar > div > \

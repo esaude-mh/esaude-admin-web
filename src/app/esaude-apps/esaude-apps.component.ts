@@ -8,7 +8,7 @@ import { EsaudeAppService } from './esaude-apps.service';
   templateUrl: './esaude-apps.component.html',
   providers: [ EsaudeAppService ]
 })
-export class EsaudeAppComponent implements OnInit {
+export class EsaudeAppsComponent implements OnInit {
 
   title = 'Apps';
   apps: EsaudeApp[];

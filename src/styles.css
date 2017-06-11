@@ -1,2 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 /*@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';*/
+
+.esaude-app-card {
+  width: 400px;
+}
+
+.esaude-container-card {
+  width: 145px;
+  display: flex;
+}
+
+.esaude-container-status-icon {
+  float: left;
+  display: inline;
+}
