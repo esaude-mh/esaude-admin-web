@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NativeUpgradeComponent } from './native-upgrade.component';
+import { TestRunningComponent } from './test-running/test-running.component';
+import {  MdCardModule,
+  MdGridListModule,
+  MdTooltipModule } from '@angular/material';
 
 describe('NativeUpgradeComponent', () => {
   let component: NativeUpgradeComponent;
@@ -8,9 +12,17 @@ describe('NativeUpgradeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NativeUpgradeComponent ]
+      declarations: [
+        NativeUpgradeComponent,
+        TestRunningComponent
+      ],
+      imports: [
+        MdCardModule,
+        MdGridListModule,
+        MdTooltipModule
+      ],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
