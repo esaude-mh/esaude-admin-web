@@ -1,11 +1,15 @@
 <md-card class="esaude-upgrade-card">
-  <md-card-title>1. Pre-Upgrade Test</md-card-title>
-  <md-card-subtitle>Ensure no eSaude Platform containers are running</md-card-subtitle>
+  <md-card-title>[1/4] Pre-Upgrade Test <span *ngIf="testRunningComplete"><md-icon>check</md-icon></span></md-card-title>
+  <md-card-subtitle>Ensure eSaude Platform is not already installed</md-card-subtitle>
   <md-card-content>
-    <p md-line>lsdf</p>
+    <span *ngIf="platformInstalledTestRun">
+      <span *ngIf="platformInstalled; else elseBlock">The eSaude Platform app is already installed. Please backup and remove
+      the app to proceed with upgrade from native.</span>
+      <ng-template #elseBlock>No eSaude Platform app detected.</ng-template>
+    </span>
   </md-card-content>
   <md-card-actions>
-    <button md-button (click)="someAction()">Action</button>
+    <button md-button [disabled]="testRunningComplete" (click)="checkPlatformInstalled()">Check</button>
   </md-card-actions>
 </md-card>
 <p></p>

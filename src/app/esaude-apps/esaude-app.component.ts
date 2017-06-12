@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { EsaudeApp } from './esaude-app';
-import { EsaudeAppService } from './esaude-apps.service';
+import { EsaudeApp } from '../models/esaude-app';
+import { EsaudeAppService } from '../service/esaude-apps.service';
 
 @Component({
   selector: 'esaude-admin-app',

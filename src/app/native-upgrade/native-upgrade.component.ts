@@ -10,10 +10,14 @@ import { TestRunningComponent } from './test-running/test-running.component';
 export class NativeUpgradeComponent implements OnInit {
 
   title = 'Native Upgrade';
+  testRunningComplete = false;
 
   constructor() { }
 
-  ngOnInit() {
+  testRunningCompleted(complete: boolean) {
+    console.log('done');
   }
 
+  ngOnInit() {
+  }
 }
