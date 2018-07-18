@@ -1,11 +1,11 @@
-<md-toolbar color="primary">
+<mat-toolbar color="primary">
   <span>{{ title }}</span>
 
   <!-- This fills the remaining space of the current row -->
   <span class="title-float-right"></span>
 
-  <button *ngFor="let page of pages" md-button routerLink="{{ page.route }}">{{ page.title }}</button>
-</md-toolbar>
+  <button *ngFor="let page of pages" mat-button routerLink="{{ page.route }}">{{ page.title }}</button>
+</mat-toolbar>
 <div class="esaude-container">
    <router-outlet></router-outlet>
 </div>

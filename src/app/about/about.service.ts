@@ -4,7 +4,7 @@ import { Http } from '@angular/http';
 import { About } from './about';
 import { ABOUT } from './mock-about';
 
-import 'rxjs/add/operator/toPromise';
+//import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class AboutService {

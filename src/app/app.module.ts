@@ -9,16 +9,16 @@ import { NumeralPipe } from './numeral.pipe';
 
 // material design modules
 import {
-  MdToolbarModule,
-  MdButtonModule,
-  MdListModule,
-  MdIconModule,
-  MdTabsModule,
-  MdCardModule,
-  MdProgressSpinnerModule,
-  MdChipsModule,
-  MdGridListModule,
-  MdTooltipModule
+  MatToolbarModule,
+  MatButtonModule,
+  MatListModule,
+  MatIconModule,
+  MatTabsModule,
+  MatCardModule,
+  MatProgressSpinnerModule,
+  MatChipsModule,
+  MatGridListModule,
+  MatTooltipModule
 } from '@angular/material';
 
 // esaude admin components
@@ -58,16 +58,16 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
 
     // material design
-    MdToolbarModule,
-    MdButtonModule,
-    MdListModule,
-    MdIconModule,
-    MdTabsModule,
-    MdCardModule,
-    MdProgressSpinnerModule,
-    MdChipsModule,
-    MdGridListModule,
-    MdTooltipModule
+    MatToolbarModule,
+    MatButtonModule,
+    MatListModule,
+    MatIconModule,
+    MatTabsModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatChipsModule,
+    MatGridListModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

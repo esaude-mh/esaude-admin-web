@@ -1,41 +1,41 @@
-<md-card class="esaude-app-card">
-  <md-card-title>{{ app.name }}</md-card-title>
-  <md-card-subtitle>
+<mat-card class="esaude-app-card">
+  <mat-card-title>{{ app.name }}</mat-card-title>
+  <mat-card-subtitle>
     <span *ngIf="app.version; else elseBlock">v{{ app.version }}</span>
     <ng-template #elseBlock>Unknown Version</ng-template>
-  </md-card-subtitle>
-  <md-card-content>
+  </mat-card-subtitle>
+  <mat-card-content>
 
-    <md-grid-list cols="2">
-      <md-grid-tile *ngFor="let container of app.containers">
+    <mat-grid-list cols="2">
+      <mat-grid-tile *ngFor="let container of app.containers">
         <!-- this should be it's own component -->
-        <md-card class="esaude-container-card">
-          <md-card-header>
-            <div class="esaude-container-status-icon" mdTooltip="{{ container.status }}" [mdTooltipPosition]="'above'">
+        <mat-card class="esaude-container-card">
+          <mat-card-header>
+            <div class="esaude-container-status-icon" matTooltip="{{ container.status }}" [matTooltipPosition]="'above'">
               <div *ngIf="container.state === 'running'; else elseBlock">
-                <md-icon>check_circle</md-icon>
+                <mat-icon>check_circle</mat-icon>
               </div>
               <ng-template #elseBlock>
-                <md-icon>error</md-icon>
+                <mat-icon>error</mat-icon>
               </ng-template>
             </div>
-            <md-card-title>{{container.image.name}}</md-card-title>
-            <md-card-subtitle>
+            <mat-card-title>{{container.image.name}}</mat-card-title>
+            <mat-card-subtitle>
               <span *ngIf="app.version; else elseBlock1">v{{ container.image.version }}</span>
               <ng-template #elseBlock1>Unknown Version</ng-template>
-            </md-card-subtitle>
-          </md-card-header>
-          <md-card-content>
+            </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
             Created {{ container.created.display }}
-          </md-card-content>
-        </md-card>
-      </md-grid-tile>
-    </md-grid-list>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
 
-  </md-card-content>
-  <md-card-actions>
-    <button md-button>Restart</button>
-    <button md-button>Stop</button>
-  </md-card-actions>
-</md-card>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>Restart</button>
+    <button mat-button>Stop</button>
+  </mat-card-actions>
+</mat-card>
 <p></p>

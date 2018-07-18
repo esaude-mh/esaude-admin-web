@@ -3,8 +3,6 @@ import { Http } from '@angular/http';
 
 import { Backups, BackupResponse } from './backups';
 
-import 'rxjs/add/operator/toPromise';
-
 @Injectable()
 export class BackupService {
   private esaudeAdminBackupUrl = 'http://localhost:2580/backup';

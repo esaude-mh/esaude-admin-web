@@ -3,7 +3,7 @@ import { By } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { RouterTestingModule } from '@angular/router/testing';
-import { MdToolbarModule } from '@angular/material';
+import { MatToolbarModule } from '@angular/material';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -12,7 +12,7 @@ describe('AppComponent', () => {
         AppComponent,
       ],
       imports: [
-        MdToolbarModule,
+        MatToolbarModule,
         RouterTestingModule,
       ],
     }).compileComponents();
@@ -35,8 +35,8 @@ describe('AppComponent', () => {
   it('should render title in navbar', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const de = fixture.debugElement.query(By.css('md-toolbar > div > \
-      md-toolbar-row > span:nth-child(1)'));
+    const de = fixture.debugElement.query(By.css('Mat-toolbar > div > \
+      Mat-toolbar-row > span:nth-child(1)'));
     const el = de.nativeElement;
 
     expect(el.textContent).toContain('eSaude Admin');
@@ -51,8 +51,8 @@ describe('AppComponent', () => {
       { title: 'Native Upgrade', route: '/native-upgrade' },
       { title: 'About', route: '/about' },
     ];
-    const links = fixture.debugElement.queryAll(By.css('md-toolbar > div > \
-      md-toolbar-row > button'));
+    const links = fixture.debugElement.queryAll(By.css('Mat-toolbar > div > \
+      Mat-toolbar-row > button'));
 
     // Make sure navigation links are exactly what we expect
     links.forEach((val, i) => {

@@ -1,13 +1,13 @@
 <h1>{{title}}</h1>
 <div *ngIf="backups">
-  <md-tab-group dynamicHeight>
-    <md-tab label="Database">
+  <mat-tab-group dynamicHeight>
+    <mat-tab label="Database">
       <div class="esaude-backup-tab-container">
         <div *ngIf="creating; else elseBlock">
-          <h2><a id="esaude-backupt-create-button" md-raised-button color="primary" disabled><img height="12px" src="../assets/img/loader.gif"/> <i>Creating...</i></a></h2>
+          <h2><a id="esaude-backupt-create-button" mat-raised-button color="primary" disabled><img height="12px" src="../assets/img/loader.gif"/> <i>Creating...</i></a></h2>
         </div>
         <ng-template #elseBlock>
-          <h2><a id="esaude-backupt-create-button" md-raised-button color="primary" (click)="createBackup()"><md-icon md-list-icon>add_circle_outline</md-icon> Create New</a></h2>
+          <h2><a id="esaude-backupt-create-button" mat-raised-button color="primary" (click)="createBackup()"><mat-icon mat-list-icon>add_circle_outline</mat-icon> Create New</a></h2>
         </ng-template>
       </div>
 
@@ -15,18 +15,18 @@
         <esaude-admin-backup *ngFor="let backup of backups.database" [backup]="backup"></esaude-admin-backup>
       </div>
 
-    </md-tab>
+    </mat-tab>
 
-    <md-tab disabled label="Modules">
-    </md-tab>
+    <mat-tab disabled label="Modules">
+    </mat-tab>
 
-    <md-tab disabled label="Application">
-    </md-tab>
+    <mat-tab disabled label="Application">
+    </mat-tab>
 
-    <md-tab disabled label="Bundles">
-    </md-tab>
+    <mat-tab disabled label="Bundles">
+    </mat-tab>
 
-  </md-tab-group>
+  </mat-tab-group>
 </div>
 <div *ngIf="error">
   An error occurred: {{error}}
